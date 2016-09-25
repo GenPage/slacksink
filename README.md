@@ -1,18 +1,21 @@
-# stdslack
+# Slack Sink
 
-Pipe terminal output to Slack.
+This is a simple Slack CLI tool for sending data from stdin to a Slack channel,
+group, or user.
 
 ## Installation
 
-```
-$ go get github.com/sjkaliski/stdslack
-```
+    $ go get github.com/zerok/slacksink
 
 ## Usage
 
-```
-$ stdslack --token="YOUR_TOKEN"
-$ cat file.txt | stdslack --channel=#mychannel
-```
+    $ export SLACK_TOKEN=your-token
+    $ echo "hello" | slacksink --attachment --channel="#team-channel" \
+      --message="Some title"
 
-Once the command has completed, all output to `stdout` will be posted by user "stdslack" to your #channel.
+
+## History
+
+This is basically a complete rewrite of Steve Kaliski's stdslack tool. Our
+use-cases seem to be too different from even trying to contribute some of these
+changes back so I opted for a complete fork.
