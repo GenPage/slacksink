@@ -96,6 +96,7 @@ func parseArgs() {
 	flag.StringVar(&channel, "channel", "", "The target channel or group or user")
 	flag.StringVar(&message, "message", "", "Used as a header message while stdin becomes an attachment")
 	flag.StringVar(&username, "username", "", "The username that is rendered as author of the message")
+	flag.StringVar(&icon, "icon", "", "The icon URL that is used for the profile picture")
 	flag.BoolVar(&attach, "attachment", false, "Send as attachment")
 	flag.StringVar(&color, "color", "", "The color of the border (good, warning, danger, ...)")
 	flag.Usage = func() {
